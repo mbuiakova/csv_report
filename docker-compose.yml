@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    image: maryjein/csv_report:latest
+    ports:
+      - "3026:3026"
+    volumes:
+      - ./data:/workspace/data
+    environment:
+      - INPUT_FILE_PATH=/workspace/data/input.csv
+      - OUTPUT_FILE_PATH=/workspace/data/output.csv
